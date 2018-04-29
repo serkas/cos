@@ -22,7 +22,7 @@ job "grafana" {
       driver = "docker"
       config {
         # AWS ECR playground:
-        image = "<aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/service/grafana:latest"
+        image = "307557990628.dkr.ecr.us-east-1.amazonaws.com/service/grafana:latest"
       }
 
       config {

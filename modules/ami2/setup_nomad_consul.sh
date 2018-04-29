@@ -16,4 +16,7 @@ git clone --branch "${CONSUL_MODULE_VERSION}"  https://github.com/hashicorp/terr
 # .The consul configuration file was injected in the packer configuration before.
 sudo yum install -y dnsmasq
 sudo systemctl enable dnsmasq
+# TODO: enable logging of dns queries through dnsmasq by
+#[Service]
+# ExecStart=/usr/sbin/dnsmasq -k -q --log-facility=/var/log/dnsmasq.log
 sudo mv /tmp/dnsmasq_10-consul.conf /etc/dnsmasq.d/10-consul

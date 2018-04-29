@@ -22,7 +22,7 @@ job "prometheus" {
       driver = "docker"
       config {
         # AWS ECR playground:
-        image = "<aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/service/prometheus:2018-04-29_18-47-3483d0b97_dirty"
+        image = "307557990628.dkr.ecr.us-east-1.amazonaws.com/service/prometheus:2018-04-29_18-47-3483d0b97_dirty"
       }
 
       config {
@@ -61,7 +61,7 @@ job "prometheus" {
     task "prom-consul-exporter" {
       driver = "docker"
       config {
-        image = "<aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/service/prom-consul-exporter:0.0.1"
+        image = "307557990628.dkr.ecr.us-east-1.amazonaws.com/service/prom-consul-exporter:0.0.1"
         args = [
           "--consul.server=172.17.0.1:8500"
         ]
